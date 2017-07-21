@@ -30,10 +30,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Статьи (Видео)</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Услуги</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Словарь терминов</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">О проекте</a>
+    <a href="{% url "articles" %}" class="w3-bar-item w3-button w3-padding-large">Статьи (Видео)</a>
+    <a href="{% url "services" %}" class="w3-bar-item w3-button w3-padding-large">Услуги</a>
+    <a href="{% url "prediction" %}" class="w3-bar-item w3-button w3-padding-large">Прогноз</a>
+    <a href="{% url "thesaurus" %}" class="w3-bar-item w3-button w3-padding-large">Словарь терминов</a>
+    <a href="{% url "projectinfo" %}" class="w3-bar-item w3-button w3-padding-large">О проекте</a>
   </div>
 </div>
 
@@ -47,8 +48,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   </div>
 </header>
 
-<div class="w3-row w3-teal">
-<div class="w3-col m9 s12">
+<div class="w3-row w3-teal" style="text-align: justify">
+<div class="w3-col m9 s12 w3-padding-large">
 <p>Обычно, люди начинают задумываться над тем, что происходит в их жизни, когда случается что-то из ряда вон выходящее.
 Но, даже в этом случае, почему-то принято обвинять в этом правительство, мужа/жену, начальника и т.п.
 Как-то страшно брать ответственность на себя…</p>
