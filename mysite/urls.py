@@ -15,14 +15,22 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+# from filebrowser.sites import site
+# import grappelli
 from zhifutime import views
 
+
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    # manaurl(r'^admin/', admin.site.urls),
     url(r'^$', views.home_page, name='home_page'),
     url(r'^articles/$', views.articles, name='articles'),
     url(r'^thesaurus/$', views.thesaurus, name='thesaurus'),
     url(r'^info/$', views.projectinfo, name='projectinfo'),
     url(r'^services/$', views.services, name='services'),
     url(r'^prediction/$', views.prediction, name='prediction'),
-]
+    url(r'^tinymce/', include('tinymce.urls')),
+    # url(r'^admin/filebrowser/', include(site.urls)),
+    # url(r'^grappelli/', include('grappelli.urls')),
+    url(r'^admin/', include(admin.site.urls)),
+    ]
+

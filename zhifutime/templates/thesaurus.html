@@ -1,3 +1,14 @@
 {%  extends 'basetry.html' %}
 
 {% block title %} Словарь терминов {% endblock %}
+
+{% block main_content %}
+    <table class="w3-table-all w3-hoverable">
+        {%  for term in terms %}
+        <tr>
+            <h3>{{ term.title }}</h3>
+            <p>{{ term.text }}</p>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
