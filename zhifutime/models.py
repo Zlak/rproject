@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 from tinymce import models as tinymce_models
 
 
@@ -22,9 +23,14 @@ class Service(models.Model):
 
 class Article(models.Model):
     title = models.CharField(max_length=200)
+    slug = models.SlugField(max_length=250, unique_for_date='publish')
     desc = models.CharField(max_length=200, default='', null=True, blank=True,
                             help_text='Краткое описание статьи')
     text = tinymce_models.HTMLField()
+    publish = models.DateTimeField(default=timezone.now)
+
+    class Meta:
+        ordering = ('-publish',)
 
 
 class ProjectInfo(models.Model):
