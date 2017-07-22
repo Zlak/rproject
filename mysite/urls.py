@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-# from filebrowser.sites import site
+from filebrowser.sites import site
 # import grappelli
 from zhifutime import views
-
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     # manaurl(r'^admin/', admin.site.urls),
@@ -30,8 +31,9 @@ urlpatterns = [
     url(r'^services/$', views.services, name='services'),
     url(r'^prediction/$', views.prediction, name='prediction'),
     url(r'^tinymce/', include('tinymce.urls')),
-    # url(r'^admin/filebrowser/', include(site.urls)),
+    url(r'^admin/filebrowser/', include(site.urls)),
     # url(r'^grappelli/', include('grappelli.urls')),
     url(r'^admin/', include(admin.site.urls)),
-    ]
+
+    ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
