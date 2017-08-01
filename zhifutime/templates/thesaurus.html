@@ -5,9 +5,11 @@
 {% block main_content %}
     <table class="w3-table-all w3-hoverable">
         {%  for term in terms %}
-        <tr>
+        <tr><div class="w3-card w3-padding">
             <h3>{{ term.title }}</h3>
             <p>{{ term.text }}</p>
+
+            </div>
         </tr>
         {% endfor %}
     </table>
