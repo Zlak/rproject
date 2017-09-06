@@ -9,7 +9,7 @@ class Contact(models.Model):
 
 class Term(models.Model):
     title = models.CharField(max_length=80)
-    text = models.TextField()
+    text = tinymce_models.HTMLField()
 
     class Meta:
         ordering = ['title']
@@ -24,7 +24,7 @@ class Service(models.Model):
 class Article(models.Model):
     title = models.CharField(max_length=200)
     slug = models.SlugField(max_length=250, unique_for_date='publish')
-    desc = models.CharField(max_length=200, default='', null=True, blank=True,
+    desc = models.CharField(max_length=350, default='', null=True, blank=True,
                             help_text='Краткое описание статьи')
     text = tinymce_models.HTMLField()
     publish = models.DateTimeField(default=timezone.now)
