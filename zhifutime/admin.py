@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Contact, Service, Term, Article, ProjectInfo
+from .models import Contact, Service, Term, Article, ProjectInfo, MainPageInfo
 
 
 class ContactAdmin(admin.ModelAdmin):
@@ -36,3 +36,4 @@ admin.site.register(Term, TermAdmin)
 admin.site.register(Service, ServiceAdmin)
 admin.site.register(Article, ArticleAdmin)
 admin.site.register(ProjectInfo, ProjectinfoAdmin)
+admin.site.register(MainPageInfo, ProjectinfoAdmin)

@@ -35,3 +35,6 @@ class Article(models.Model):
 
 class ProjectInfo(models.Model):
     text = tinymce_models.HTMLField()
+
+class MainPageInfo(models.Model):
+    text = tinymce_models.HTMLField()

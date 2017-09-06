@@ -33,7 +33,7 @@ body, h1, h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
     <a href="{% url "articles" %}" class="w3-bar-item w3-button w3-padding-large">Статьи (Видео)</a>
     <a href="{% url "services" %}" class="w3-bar-item w3-button w3-padding-large">Услуги</a>
-    <a href="{% url "prediction" %}" class="w3-bar-item w3-button w3-padding-large">Прогноз</a>
+    {# <a href="{% url "prediction" %}" class="w3-bar-item w3-button w3-padding-large">Прогноз</a> #}
     <a href="{% url "thesaurus" %}" class="w3-bar-item w3-button w3-padding-large">Словарь терминов</a>
     <a href="{% url "projectinfo" %}" class="w3-bar-item w3-button w3-padding-large">О проекте</a>
   </div>
@@ -43,32 +43,44 @@ body, h1, h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <header class="w3-container w3-center w3-light-gray" style="padding:56px 16px">
     <img class="w3-left w3-circle w3-hide-small" src="{% static "Four-Pillars.png" %}" style="width:128px;height:128px;">
 
-    <div class="w3-left">
+    <div class="w3-left w3-hide-small">
     <h1 class="w3-margin">ZhiFutime</h1>
     <p class="w3-xlarge">Три кита китайской метафизики</p>
-  </div>
+    </div>
+
+    <div class="w3-center w3-hide-medium w3-hide-large">
+    <h1 class="w3-margin">ZhiFutime</h1>
+    <p class="w3-xlarge">Три кита китайской метафизики</p>
+    </div>
+
 </header>
 
 <div class="w3-row-padding w3-light-gray" style="text-align: justify">
+{% comment %}пока убран прогноз спрва делаем на весь экран
 <div class="w3-col m9 s12 ">
+{% endcomment %}
 {% block main_content %}{% endblock %}
 </div>
+{% comment %} убираем прогноз пока
 <div class="w3-col w3-red w3-hide-small m3">
-    Тут потом прогрноз или что-то еще должно будет быть
+    Тут потом прогноз или что-то еще должно будет быть
 
 </div>
+{% endcomment %}
 
 </div>
 <!-- Footer -->
 <footer class="w3-container w3-padding-64 w3-center  w3-light-gray">
-  <div class="w3-xlarge w3-padding-32 w3-opacity">
+  {% comment %} плашки на выбор
+    <div class="w3-xlarge w3-padding-32 w3-opacity">
     <a href="#"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
     <i class="fa fa-instagram w3-hover-opacity"></i>
     <i class="fa fa-snapchat w3-hover-opacity"></i>
     <i class="fa fa-pinterest-p w3-hover-opacity"></i>
     <i class="fa fa-twitter w3-hover-opacity"></i>
     <i class="fa fa-linkedin w3-hover-opacity"></i>
- </div>
+    </div>
+  {% endcomment %}
  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 </footer>
 

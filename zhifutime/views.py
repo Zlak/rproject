@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Article, Term, ProjectInfo
+from .models import Article, Term, ProjectInfo, MainPageInfo
 
 
 def home_page(request):
@@ -27,8 +27,12 @@ def thesaurus(request):
 
 def projectinfo(request):
     _info_ = ProjectInfo.objects.first()
-    return render(request, 'projectinfo.html', {'projectinfo': _info_})
+    return render(request, 'projectinfo.html', {'projectinfo': _info_, 'pagetitle': 'О проекте'})
 
+
+def mainpageinfo(request):
+    _info_ = MainPageInfo.objects.first()
+    return render(request, 'projectinfo.html', {'projectinfo': _info_, 'pagetitle': 'Главная'})
 
 def prediction(request):
     return render(request, 'prediction.html',)

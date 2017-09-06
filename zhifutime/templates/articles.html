@@ -13,16 +13,5 @@
             {{ article.desc }}
         {% endif %}
         </div>
-
-               <div class="w3-card w3-padding w3-hover-sand">
-        <a href="{% url "article_id" article.id %}">
-
-        <h3 class="w3-left-align">{{article.title|safe}}</h3></a>
-        {% if not article.desc == None %}
-            {{ article.desc }}
-        {% endif %}
-        </div>
     {% endfor %}
-
-
  {% endblock %}
