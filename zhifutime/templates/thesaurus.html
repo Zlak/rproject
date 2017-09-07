@@ -3,12 +3,21 @@
 {% block title %} Словарь терминов {% endblock %}
 
 {% block main_content %}
+    <p> </p>
+    <div  class="w3-card w3-padding" id="list">
+    {%  for term in terms %}
+        <tr><div>
+            <a href="#{{ term.id }}">{{ term.title }}</a>
+            </div>
+        </tr>
+    {% endfor %}
+    </div>
     <table class="w3-table-all w3-hoverable">
         {%  for term in terms %}
         <tr><div class="w3-card w3-padding">
-            <h3>{{ term.title }}</h3>
+            <h3 id="{{ term.id }}">{{ term.title }}</h3>
             <p>{{ term.text | safe }}</p>
-
+            <a href="#list">К списку терминов</a>
             </div>
         </tr>
         {% endfor %}

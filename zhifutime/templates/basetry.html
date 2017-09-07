@@ -5,13 +5,18 @@
 <title>ZhiFutime {% block title %}{% endblock %}</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<meta property="og:title" content="Китайская метафизика" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="{% static "Four-Pillars.png" %}" />
+<meta property="og:locale" content="ru_RU" />
 <link rel="stylesheet" href="{% static "w3.css" %}">
 <!--<link href="https://fonts.googleapis.com/css?family=Neucha" rel="stylesheet">-->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<img style='height: 100%; width: 100%; object-fit: contain'/>
 <style>
+img {max-width: 100%; height: auto; object-fit: scale-down }
 body, h1, h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
