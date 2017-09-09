@@ -1,3 +1,40 @@
 {%  extends 'basetry.html' %}
 
 {% block title %} Прогноз {% endblock %}
+{% block main_content %}
+<style>
+.hidden_sometimes {display: none}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="http://www.mingli.ru/js/informers.js"></script>
+<link rel="stylesheet" type="text/css"  href="http://www.mingli.ru/css/mingli_widget-H.css" />
+<script>
+          /* Функция получения текущего времени у пользователя */
+          var date = new Date();
+          tM = date.getMonth()+1; if (tM<10)tM="0"+tM;
+          tD = date.getDate(); if (tD<10)tD="0"+tD;
+          CurDate = tD+"."+tM+"."+date.getFullYear();
+        informer({
+         'informer':'cDay', //Название информера
+         'output': '#informerH', // ID элемента DOM куда будет вывведен информер
+		 'data':{
+				'day': CurDate, //Указывает день, записть дд.мм.гг, пример (23.01.2014)
+				'lang':'ru-RU',
+				'text':0,//Отображать иероглифы или названия
+				'description':1,//показать описания
+
+				'zanchu_show_icon':1, //отображать плюсы/минусы цзянь чу иконками
+				'zanchu':1, //показать плюсы и минусы цзянь чу
+				'show_plus':1, //показать плюсы минусы в ША
+				'assassin':1, // показать день убивающий мастера
+    			'destroyers':1, // показать разрушители
+    			'misfortunes':1, // показать потери
+    			'sha': 1, // показать ша
+				'lunar':1, // показать лунные дни
+
+			   '28stays':1 //показать 28 лунных стоянок
+			}
+        });
+            </script>
+<div id="informerH"></div>
+{% endblock %}

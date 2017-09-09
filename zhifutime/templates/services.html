@@ -1,2 +1,8 @@
 {%  extends 'basetry.html' %}
+{% load staticfiles %}
 {% block title %} Услуги {% endblock %}
+
+{%  block main_content %}
+    <p class="w3-padding w3-wide">В процессе наполнения</p>
+    <img class="w3-left w3-circle" src="{% static "Four-Pillars.png" %}">
+{% endblock %}
