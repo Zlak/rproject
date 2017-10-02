@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Zhifutime {% block title %}{% endblock %}</title>
+<title>ZhiFutime {% block title %}{% endblock %}</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta property="og:title" content="Китайская метафизика" />
@@ -15,30 +15,15 @@
 <!--<link href="https://fonts.googleapis.com/css?family=Neucha" rel="stylesheet">-->
 <link rel="shortcut icon" type="image/png" href="{%  static "favicon.ico" %}"/>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neucha">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <img style='height: 100%; width: 100%; object-fit: contain'/>
 <style>
-img {max-width: 100%; height: auto; object-fit: scale-down }
-body, h4,h5,h6 {font-family: "Lato", sans-serif}
-.w3-bar,h1,h2, h3, button {font-family: "Neucha", sans-serif}
-.fa-anchor,.fa-coffee {font-size:200px}
-{% comment %}
-.backimaged {background-image:url("{% static "zhifu.png" %}"), url("{% static "time.jpg" %}"), url("{% static "pagoda.jpg" %}");
-    height: 200px;
-    background-size: auto, contain, cover;
-    background-repeat:   no-repeat, no-repeat, no-repeat;
-    background-position: right top, right top, center center ;
-    }
-{% endcomment %}
-.backimaged {background-image: url("{% static "pagoda.jpg" %}");
-    height: 200px;
-    background-size:  cover;
-    background-repeat:    no-repeat;
-    background-position:  left center ;
-    }
 
+img {max-width: 100%; height: auto; object-fit: scale-down }
+body, h1, h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
 </style>
 
 
@@ -80,9 +65,9 @@ body, h4,h5,h6 {font-family: "Lato", sans-serif}
 
 <!-- Navbar -->
 <div class="w3-top">
-  <div class="w3-bar w3-light-blue w3-card-2 w3-left-align w3-large">
-    <a class="w3-bar-item w3-button w3-hide-large w3-hide-medium w3-right w3-padding-small w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Меню"><i class="fa fa-folder"></i></a>
-    <a href="{% url "home_page" %}" class="w3-bar-item w3-button w3-padding-small w3-white fa fa-home">Главная</a>
+  <div class="w3-bar w3-teal w3-card-2 w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-large w3-hide-medium w3-right w3-padding-small w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Меню"><i class="fa fa-bars"></i></a>
+    <a href="{% url "home_page" %}" class="w3-bar-item w3-button w3-padding-small w3-white">Главная</a>
     <a href="{% url "articles" %}" class="w3-bar-item w3-button w3-hide-small  w3-padding-small w3-hover-white">Статьи (Видео)</a>
     <a href="{% url "services" %}" class="w3-bar-item w3-button w3-hide-small  w3-padding-small w3-hover-white">Услуги</a>
     <a href="{% url "thesaurus" %}" class="w3-bar-item w3-button w3-hide-small  w3-padding-small w3-hover-white">Словарь терминов</a>
@@ -100,45 +85,33 @@ body, h4,h5,h6 {font-family: "Lato", sans-serif}
 </div>
 
 <!-- Header -->
-<header>
-    <div class="backimaged w3-container w3-text-white w3-center w3-pale-blue" style="text-shadow: 1px 1px #111111; margin-top: 10px" >
-    {%  comment %}
+<header class="w3-container w3-center w3-pale-blue" style="margin-top: 10px" >
     <img class="w3-left w3-circle w3-hide-small" src="{% static "Four-Pillars.png" %}" style="width:128px;height:128px;">
-    {% endcomment %}
-    <div class="w3-center ">
-        <div class="w3-left w3-circle w3-hide-small" style="background: url({% static "time.jpg" %}); background-size: cover">
-            <img  src="{% static "zhifu.png" %}" style="filter: invert(100%); width:128px;height:128px;">
-        </div>
-        <h1 class="w3-margin ">Zhifutime</h1>
-        <h3 class="w3-xlarge w3-text-white">Жизнь в современном мире. Cверяя время с мудростью предков</h3>
-    </div>    <p class="w3-left">Клуб китайской метафизики</p>
-    </div>
 
-    {%  comment %}
-    <div class="w3-center w3-hide-medium w3-hide-large">
-    <h1 class="w3-margin">Zhifutime</h1>
+    <div class="w3-left w3-hide-small">
+    <h1 class="w3-margin">ZhiFutime</h1>
     <p class="w3-xlarge">Три кита китайской метафизики</p>
     </div>
-    {% endcomment %}
+
+    <div class="w3-center w3-hide-medium w3-hide-large">
+    <h1 class="w3-margin">ZhiFutime</h1>
+    <p class="w3-xlarge">Три кита китайской метафизики</p>
+    </div>
 
 </header>
 
-<div class="w3-row-padding " style="text-align: justify; background-color: #ecf0f1">
- <div class="w3-col m8 l9 s12">
+<div class="w3-row-padding w3-light-gray" style="text-align: justify">
+ <div class="w3-col m8 l9 s12 ss-style-roundedsplit">
   {% block main_content %}{% endblock %}
  </div>
 
- <div id="prediction_widget" class="hidden_sometimes w3-rest w3-hide-small">
-     <h3 class="w3-padding w3-text-blue w3-large">Прогноз на сегодня</h3>
+ <div id="prediction_widget" class="hidden_sometimes w3-rest w3-ligth-gray w3-hide-small">
+     <p class="w3-padding w3-text-blue w3-large">Прогноз на сегодня</p>
     <div id="informer" ></div>
-    <iframe  src="https://www.youtube.com/embed/VBKWyusd4sM" frameborder="0" allowfullscreen></iframe>
  </div>
-
-
-
 </div>
 <!-- Footer -->
-<footer class="w3-container w3-center  w3-light-blue">
+<footer class="w3-container w3-center  w3-light-gray">
   {% comment %} плашки на выбор потом
     <div class="w3-xlarge w3-padding-32 w3-opacity">
     <a href="#"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
