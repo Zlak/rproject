@@ -94,21 +94,27 @@ body, h4,h5,h6 {font-family: "Lato", sans-serif}
 <!-- Navbar -->
 <div class="w3-top">
   <div class="w3-bar w3-light-blue w3-card-2 w3-left-align w3-large">
-    <a class="w3-bar-item w3-button w3-hide-large w3-hide-medium w3-right w3-padding-small w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Меню"><i class="fa fa-folder"></i></a>
-    <a href="{% url "home_page" %}" class="w3-bar-item w3-button w3-padding-small w3-white fa fa-home">Главная</a>
+    <a class="w3-bar-item w3-button w3-hide-large w3-hide-medium w3-right w3-padding-small w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Меню">{#<i class="fa fa-folder" aria-hidden="true"></i>#}<i class="fa fa-bars" aria-hidden="true"></i></a>
+    <a href="{% url "home_page" %}"  class="w3-bar-item w3-button w3-padding-small w3-white fa fa-home">Главная</a>
+    {# <a href="{% url "prediction" %}" class="w3-bar-item w3-button w3-padding-small w3-hide-large w3-hide-medium">Прогноз</a> #}
     <a href="{% url "articles" %}" class="w3-bar-item w3-button w3-hide-small  w3-padding-small w3-hover-white">Статьи (Видео)</a>
-    <a href="{% url "services" %}" class="w3-bar-item w3-button w3-hide-small  w3-padding-small w3-hover-white">Услуги</a>
-    <a href="{% url "thesaurus" %}" class="w3-bar-item w3-button w3-hide-small  w3-padding-small w3-hover-white">Словарь терминов</a>
     <a href="{% url "projectinfo" %}" class="w3-bar-item w3-button w3-hide-small  w3-padding-small w3-hover-white">О проекте</a>
+    {# <a href="{% url "services" %}" class="w3-bar-item w3-button w3-hide-small  w3-padding-small w3-hover-white">Услуги</a> #}
+    <a href="{% url "thesaurus" %}" class="w3-bar-item w3-button w3-hide-small  w3-padding-small w3-hover-white">Словарь терминов</a>
+    <a href="{% url "services" %}" class="w3-bar-item w3-button w3-hide-small  w3-padding-small w3-hover-white">Консультации</a>
+    <a href="{% url "services" %}" class="w3-bar-item w3-button w3-hide-small  w3-padding-small w3-hover-white">Обучение</a>
+    <a href="{% url "services" %}" class="w3-bar-item w3-button w3-hide-small  w3-padding-small w3-hover-white">Контакты</a>
+    <a href="{% url "services" %}" class="w3-bar-item w3-button w3-hide-small  w3-padding-small w3-hover-white">Калькулятор</a>
   </div>
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
     <a href="{% url "articles" %}" class="w3-bar-item w3-button w3-padding-large">Статьи (Видео)</a>
-    <a href="{% url "services" %}" class="w3-bar-item w3-button w3-padding-large">Услуги</a>
+    <a href="{% url "projectinfo" %}" class="w3-bar-item w3-button w3-padding-large">О проекте</a>
+    {# <a href="{% url "services" %}" class="w3-bar-item w3-button w3-padding-large">Услуги</a> #}
     <a href="{% url "prediction" %}" class="w3-bar-item w3-button w3-padding-large">Прогноз</a>
     <a href="{% url "thesaurus" %}" class="w3-bar-item w3-button w3-padding-large">Словарь терминов</a>
-    <a href="{% url "projectinfo" %}" class="w3-bar-item w3-button w3-padding-large">О проекте</a>
+
   </div>
 </div>
 
@@ -168,7 +174,8 @@ body, h4,h5,h6 {font-family: "Lato", sans-serif}
     <i class="fa fa-linkedin w3-hover-opacity"></i>
     </div>
   {% endcomment %}
-    <div class="w3-padding">Ирина Усик <section>Тел.: 8-914-704-1221, 8-914-970-3319</section><section>e-mail: <a href="mailto:irinausik268@gmail.com">irinausik268@gmail.com</a></section></div>
+    <div class="w3-padding">Ирина Усик <section>Тел.: 8-914-704-1221, 8-914-970-3319</section>
+        <section>e-mail: <a href="mailto:irinausik268@gmail.com">irinausik268@gmail.com</a></section></div>
  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 </footer>
 
