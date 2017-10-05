@@ -38,7 +38,20 @@ body, h4,h5,h6 {font-family: "Lato", sans-serif}
     background-repeat:    no-repeat;
     background-position:  left center ;
     }
-
+.backclouded {background-color: #ecf0f1}
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
 </style>
 
 
@@ -123,18 +136,24 @@ body, h4,h5,h6 {font-family: "Lato", sans-serif}
 
 </header>
 
-<div class="w3-row-padding " style="text-align: justify; background-color: #ecf0f1">
- <div class="w3-col m8 l9 s12">
+<div class="w3-row  backclouded" style="text-align: justify;">
+ <div class="w3-col m8 l9 s12 w3-border w3-padding" >
   {% block main_content %}{% endblock %}
  </div>
 
- <div id="prediction_widget" class="hidden_sometimes w3-rest w3-hide-small">
-     <h3 class="w3-padding w3-text-blue w3-large">Прогноз на сегодня</h3>
-    <div id="informer" ></div>
-    <iframe  src="https://www.youtube.com/embed/VBKWyusd4sM" frameborder="0" allowfullscreen></iframe>
+ <div class="w3-col m4 l3  w3-border   w3-hide-small backclouded">
+   <div id="prediction_widget" class="hidden_sometimes ">
+      <h3 class="w3-padding w3-text-blue w3-large">Прогноз на сегодня</h3>
+      <div id="informer" ></div>
+   </div>
+   <div class="videoWrapper w3-border">
+     <i class="fa fa-youtube" aria-hidden="true">
+         <a href="http://radio.mediametrics.ru/chinese_Metaphysics/" target="_blank">Видео на radio.mediametrics</a>
+     </i>
+     <!-- Copy & Pasted from YouTube -->
+     <iframe  src="https://www.youtube.com/embed/VBKWyusd4sM" frameborder="0" allowfullscreen></iframe>
+   </div>
  </div>
-
-
 
 </div>
 <!-- Footer -->
