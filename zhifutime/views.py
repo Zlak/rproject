@@ -30,9 +30,13 @@ def projectinfo(request):
     return render(request, 'projectinfo.html', {'projectinfo': _info_, 'pagetitle': 'О проекте'})
 
 
+# def mainpageinfo(request):
+#     _info_ = MainPageInfo.objects.first()
+#     return render(request, 'projectinfo.html', {'projectinfo': _info_, 'pagetitle': 'Китайская метафизика'})
 def mainpageinfo(request):
-    _info_ = MainPageInfo.objects.first()
-    return render(request, 'projectinfo.html', {'projectinfo': _info_, 'pagetitle': 'Китайская метафизика'})
+    article = Article.objects.first()
+    return render(request, 'main.html', {'article':article})
+
 
 def prediction(request):
     return render(request, 'prediction.html',)
