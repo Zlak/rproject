@@ -142,26 +142,34 @@ body, h4,h5,h6 {font-family: "Lato", sans-serif}
 
 </header>
 
-<div class="w3-row  backclouded" style="text-align: justify;">
- <div class="w3-col m8 l9 s12 w3-border w3-padding" >
+<div class="w3-row w3-light-blue" style="text-align: justify;">
+
+ <div class="w3-col m8 l9 s12">
+   <div class="backclouded w3-border" style="margin: 8px; ">
   {% block main_content %}{% endblock %}
+   </div>
  </div>
 
- <div class="w3-col m4 l3  w3-border   w3-hide-small backclouded">
-   <div id="prediction_widget" class="hidden_sometimes ">
-      <h3 class="w3-padding w3-text-blue w3-large">Прогноз на сегодня</h3>
+ <div class="w3-col m4 l3   w3-hide-small" >
+   <div id="prediction_widget" class="w3-border hidden_sometimes backclouded" style="margin-right: 8px; margin-top: 8px">
+      <h3 class="w3-text-blue w3-large">Прогноз на сегодня</h3>
       <div id="informer" ></div>
    </div>
-   <div class="videoWrapper w3-border">
-     <i class="fa fa-youtube" aria-hidden="true">
+   <div class="w3-border w3-padding-16 backclouded" style="margin-right: 8px; margin-top: 8px">
+     <i class="fa fa-youtube" aria-hidden="true"></i>
          <a href="http://radio.mediametrics.ru/chinese_Metaphysics/" target="_blank">Видео на radio.mediametrics</a>
-     </i>
-     <!-- Copy & Pasted from YouTube -->
-     <iframe  src="https://www.youtube.com/embed/VBKWyusd4sM" frameborder="0" allowfullscreen></iframe>
+
+       <!-- Copy & Pasted from YouTube -->
+       <div class="videoWrapper">
+        <iframe  src="https://www.youtube.com/embed/VBKWyusd4sM" frameborder="0" allowfullscreen></iframe>
+       </div>
+
    </div>
  </div>
 
 </div>
+
+
 <!-- Footer -->
 <footer class="w3-container w3-center  w3-light-blue">
   {% comment %} плашки на выбор потом

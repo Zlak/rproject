@@ -35,7 +35,7 @@ def projectinfo(request):
 #     return render(request, 'projectinfo.html', {'projectinfo': _info_, 'pagetitle': 'Китайская метафизика'})
 def mainpageinfo(request):
     article = Article.objects.first()
-    return render(request, 'main.html', {'article':article})
+    return render(request, 'main.html', {'article': article})
 
 
 def prediction(request):
