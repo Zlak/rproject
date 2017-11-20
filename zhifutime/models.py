@@ -13,12 +13,18 @@ class Term(models.Model):
 
     class Meta:
         ordering = ['title']
+        verbose_name = 'Термин'
+        verbose_name_plural = 'Термины'
 
 
 class Service(models.Model):
     title = models.CharField(default='', max_length=80)
     desc = models.TextField()
     price = models.CharField(max_length=80)
+
+    class Meta:
+        verbose_name = 'Услуга'
+        verbose_name_plural = 'Услуги'
 
 
 class Article(models.Model):
@@ -31,7 +37,8 @@ class Article(models.Model):
 
     class Meta:
         ordering = ('-publish',)
-
+        verbose_name = 'Статья'
+        verbose_name_plural = 'Статьи'
 
 class ProjectInfo(models.Model):
     text = tinymce_models.HTMLField()
