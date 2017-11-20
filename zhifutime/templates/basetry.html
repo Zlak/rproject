@@ -101,10 +101,10 @@ body, h4,h5,h6 {font-family: "Lato", sans-serif}
     <a href="{% url "projectinfo" %}" class="w3-bar-item w3-button w3-hide-small  w3-padding-small w3-hover-white">О проекте</a>
     {# <a href="{% url "services" %}" class="w3-bar-item w3-button w3-hide-small  w3-padding-small w3-hover-white">Услуги</a> #}
     <a href="{% url "thesaurus" %}" class="w3-bar-item w3-button w3-hide-small  w3-padding-small w3-hover-white">Словарь терминов</a>
-    <a href="{% url "services" %}" class="w3-bar-item w3-button w3-hide-small  w3-padding-small w3-hover-white">Консультации</a>
-    <a href="{% url "services" %}" class="w3-bar-item w3-button w3-hide-small  w3-padding-small w3-hover-white">Обучение</a>
-    <a href="{% url "services" %}" class="w3-bar-item w3-button w3-hide-small  w3-padding-small w3-hover-white">Контакты</a>
-    <a href="{% url "services" %}" class="w3-bar-item w3-button w3-hide-small  w3-padding-small w3-hover-white">Калькулятор</a>
+    {# <a href="{% url "services" %}" class="w3-bar-item w3-button w3-hide-small  w3-padding-small w3-hover-white">Консультации</a> #}
+    {# <a href="{% url "services" %}" class="w3-bar-item w3-button w3-hide-small  w3-padding-small w3-hover-white">Обучение</a> #}
+    {# <a href="{% url "services" %}" class="w3-bar-item w3-button w3-hide-small  w3-padding-small w3-hover-white">Контакты</a> #}
+    {# <a href="{% url "services" %}" class="w3-bar-item w3-button w3-hide-small  w3-padding-small w3-hover-white">Калькулятор</a> #}
   </div>
 
   <!-- Navbar on small screens -->
@@ -114,7 +114,7 @@ body, h4,h5,h6 {font-family: "Lato", sans-serif}
     {# <a href="{% url "services" %}" class="w3-bar-item w3-button w3-padding-large">Услуги</a> #}
     <a href="{% url "prediction" %}" class="w3-bar-item w3-button w3-padding-large">Прогноз</a>
     <a href="{% url "thesaurus" %}" class="w3-bar-item w3-button w3-padding-large">Словарь терминов</a>
-
+    <a href="http://radio.mediametrics.ru/chinese_Metaphysics/" target="_blank" class="w3-bar-item w3-button fa-link w3-padding-large ">Видео на radio.mediametrics</a>
   </div>
 </div>
 
@@ -124,13 +124,14 @@ body, h4,h5,h6 {font-family: "Lato", sans-serif}
     {%  comment %}
     <img class="w3-left w3-circle w3-hide-small" src="{% static "Four-Pillars.png" %}" style="width:128px;height:128px;">
     {% endcomment %}
-    <div class="w3-center ">
+    <div class="w3-left ">
         <div class="w3-left w3-circle w3-hide-small" style="background: url({% static "time.jpg" %}); background-size: cover">
             <img  src="{% static "zhifu.png" %}" style="filter: invert(100%); width:128px;height:128px;">
         </div>
         <h1 class="w3-margin ">Zhifutime</h1>
         <h3 class="w3-xlarge w3-text-white">Жизнь в современном мире. Cверяя время с мудростью предков</h3>
-    </div>    <p class="w3-left">Клуб китайской метафизики</p>
+
+    </div>
     </div>
 
     {%  comment %}
@@ -152,7 +153,7 @@ body, h4,h5,h6 {font-family: "Lato", sans-serif}
 
  <div class="w3-col m4 l3   w3-hide-small" >
    <div id="prediction_widget" class="w3-border hidden_sometimes backclouded" style="margin-right: 8px; margin-top: 8px">
-      <h3 class="w3-text-blue w3-large">Прогноз на сегодня</h3>
+      <h3 class="w3-text-blue w3-large w3-padding-small">Прогноз на сегодня</h3>
       <div id="informer" ></div>
    </div>
    <div class="w3-border w3-padding-16 backclouded" style="margin-right: 8px; margin-top: 8px">
