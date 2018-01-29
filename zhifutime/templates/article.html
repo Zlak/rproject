@@ -1,7 +1,7 @@
 {%  extends 'basetry.html' %}
 
 {% block title %} {{ article.title }} {% endblock %}
-
+{% block ogtitle %}: {{ article.title }} {% endblock %}
 {% block main_content %}
 <h2 class="w3-container w3-left">{{article.title}}</h2>
 <section class="w3-container">
