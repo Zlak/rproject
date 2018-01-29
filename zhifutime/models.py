@@ -1,5 +1,7 @@
 from django.db import models
 from django.utils import timezone
+from django.core.urlresolvers import reverse
+
 from tinymce import models as tinymce_models
 
 
@@ -40,8 +42,13 @@ class Article(models.Model):
         verbose_name = 'Статья'
         verbose_name_plural = 'Статьи'
 
+    def get_absolute_url(self):
+        return reverse('article_id', args=[self.id])
+
+
 class ProjectInfo(models.Model):
     text = tinymce_models.HTMLField()
+
 
 class MainPageInfo(models.Model):
     text = tinymce_models.HTMLField()
