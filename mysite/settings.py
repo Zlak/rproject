@@ -25,7 +25,7 @@ SECRET_KEY = '+60%8onqqh5=zb1@m(dhu$@twkm3ap2wk5=l#1q+#7_#%*!$!h'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['zhifutime.ru', '127.0.0.1']
+ALLOWED_HOSTS = ['www.zhifutime.ru', 'zhifutime.ru', '127.0.0.1']
 
 
 # Application definition
