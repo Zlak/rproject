@@ -3,7 +3,8 @@ from django.utils import timezone
 from django.core.urlresolvers import reverse
 
 from tinymce import models as tinymce_models
-
+from django.contrib.contenttypes.fields import GenericRelation
+from hitcount.models import HitCount, HitCountMixin
 
 class Contact(models.Model):
     text = models.CharField(max_length=200)
@@ -29,13 +30,16 @@ class Service(models.Model):
         verbose_name_plural = 'Услуги'
 
 
-class Article(models.Model):
+class Article(models.Model, HitCountMixin):
     title = models.CharField(max_length=200)
     slug = models.SlugField(max_length=250, unique_for_date='publish')
     desc = models.CharField(max_length=350, default='', null=True, blank=True,
                             help_text='Краткое описание статьи')
     text = tinymce_models.HTMLField()
     publish = models.DateTimeField(default=timezone.now)
+    hit_count_generic = GenericRelation(
+        HitCount, object_id_field='object_pk',
+        related_query_name='hit_count_generic_relation')
 
     class Meta:
         ordering = ('-publish',)

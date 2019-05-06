@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'tinymce',
     'zhifutime.apps.ZhifutimeConfig',
+    'hitcount',
 ]
 
 MIDDLEWARE = [
@@ -130,3 +131,6 @@ MEDIA_URL = '/media/'
 FILEBROWSER_DIRECTORY = 'uploads/'
 FILEBROWSER_VERSIONS_BASEDIR = '_versions/'
 FILEBROWSER_PLACEHOLDER = 'uploads/placeholders/testimage.png'
+
+HITCOUNT_KEEP_HIT_ACTIVE = { 'seconds': 30 }
+HITCOUNT_KEEP_HIT_IN_DATABASE = { 'days': 365 }

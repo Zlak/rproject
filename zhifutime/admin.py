@@ -25,11 +25,16 @@ class ProjectinfoAdmin(admin.ModelAdmin):
 
 
 class ArticleAdmin(admin.ModelAdmin):
+    model = Article
     prepopulated_fields = {'slug': ('title',)}
-    list_display = ('title', 'desc', 'publish')
+    list_display = ('title', 'desc', 'publish', 'get_hits')
     search_fields = ('title', 'text')
-    ordering = ('-publish', 'title')
+    ordering = ('-publish', 'title', 'hit_count_generic__hits')
 
+    def get_hits(self, obj):
+        return obj.hit_count.hits
+    get_hits.admin_order_field = 'hit_count_generic__hits'  #Allows column order sorting
+    get_hits.short_description = 'Hits'  #Renames column head
 
 admin.site.register(Contact, ContactAdmin)
 admin.site.register(Term, TermAdmin)
